@@ -37,7 +37,7 @@ Sublimelinter-jshint
 				Mostly, you can use now, and clik Tools -> SublimeLinter -> Lint Mode(Background, ....).
 				如果Node没有安装在默认位置，在菜单里Tools -> SublimeLinter -> Open User Setting可以修改成实际安装位置
 
-
+robotframework			---for robot language usage
 
 OR you can see detail information from link:
 http://blog.csdn.net/u013861109/article/details/53106074
