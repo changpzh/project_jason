@@ -7,7 +7,7 @@ Set up your local directory
 mkdir /path/to/your/project
 cd /path/to/your/project
 git initgit
-remote add origin https://changpzh@bitbucket.org/changpzh/project_zhou.git
+remote add origin https://github.com/changpzh/project_jason.git
 
 #Create your first file, commit, and push
 
@@ -22,6 +22,6 @@ I have an existing project
 #Already have a Git repository on your computer? Let's push it up to Bitbucket.
 
 cd /path/to/my/repo
-git remote add origin https://changpzh@bitbucket.org/changpzh/project_zhou.git
+git remote add origin https://github.com/changpzh/project_jason.git
 git push -u origin --all # pushes up the repo and its refs for the first time
 git push origin --tags # pushes up any tags
