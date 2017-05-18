@@ -1,0 +1,14 @@
+1. Get all duplicated faultids from given collection;
+2. Loop each faultid:
+	* get all prs in pr_summary collection according to faultid;
+	* calculate remove duplicate flag according to each flag;
+		- Yes;
+		- WithIn BL&Year;
+		- WithIn Program;
+		- WithIn Program&Week;
+		- WithIn Program&Month;
+	* Write mapping flag to each pr;
+	* save pr info to file;
+	* Exist Loop
+3. Upsert file contents to pr_summary collection;
+4. mongoimport file contents to pr_load_remove collection with drop method;
