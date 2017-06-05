@@ -84,7 +84,6 @@ Check Response Results
     \       ${overall status}=          Evaluate    '${ncdr_status}' == 'PASS' and '${b_status}' == 'PASS' and '${c_status}' == 'PASS' and '${baseline_status}' == 'PASS' and '${ncdr_cum_status}' == 'PASS'
     \       Run Keyword And Continue On Failure     Should be True      ${overall status}   Ltemetrics url: ${ltemetrics_url} \n Coop url: ${coop_url} \n Failed on ${time}: \n Name | ltemetrics | coop \n ncdr_status: ${ncdr_status} | ${ltemetrics_row_data['PRS']} | ${coop_row_data['NCDR(A&B)']}\n a_status: ${a_status} | ${ltemetrics_row_data['PR1']} | ${coop_row_data['A-Critical']}\n b_status: ${b_status} | ${ltemetrics_row_data['PR2']} | ${coop_row_data['B-Major']}\n c_status: ${c_status} | ${ltemetrics_row_data['PR3']} | ${coop_row_data['C-Minor']}\n baseline_status: ${baseline_status} | ${ltemetrics_row_data['PRS_B']} | ${coop_row_data['Baseline']}\n ncdr_cum_status: ${ncdr_cum_status} | ${ltemetrics_row_data['PRS_C']} | ${coop_row_data['NCDR Cumulative']}
 
-
 Get Dictionary from List
     [Arguments]     ${ltemetrics_results}      ${key}       ${time}
     :For            ${index}                   IN RANGE     ${ltemetrics_results.__len__()}
