@@ -35,7 +35,8 @@ fi
 mongoimport --host coop/hzcoop02.china.nsn-net.net:27017 --db pipeline --collection pr_summary --upsert --upsertFields prid --file $FILE
 
 ##generate new collection for following step, and backup index and recover index.
-mongoexport -d pipeline -c system.indexes -o system.indexes
+#***Note that: you should recover indexes if use --drop of mongoimport cmd.
+mongoexport -h coop/hzcoop02.china.nsn-net.net:27017 -d pipeline -c system.indexes -o system.indexes
 mongoimport -h coop/hzcoop02.china.nsn-net.net:27017 --db pipeline --collection pr_sd_datalist_load --file /home/cpd/pr_sd_datalist_load_backup/pr_sd_datalist_load_backup.txt --drop
 mongoimport -h coop/hzcoop02.china.nsn-net.net:27017 -d pipeline -c system.indexes system.indexes --drop
 
